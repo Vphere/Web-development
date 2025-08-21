@@ -1,0 +1,68 @@
+<html>
+<body>
+    <h2>GeeksforGeeks</h2>
+    <!-- Finding the HTML Elements by their Id in DOM -->
+    <p id="intro">
+        A Computer Science portal for geeks.
+    </p>
+
+    <p>
+        This example illustrates the <b>getElementById</b> method.
+    </p>
+
+    <p id="demo"></p>
+    <script>
+        const element = document.getElementById("intro");
+        // document.getElementById("intro") tries to find an element in the HTML that has the id "intro".
+
+        document.getElementById("demo").innerHTML =
+            "GeeksforGeeks introduction is: " + element.innerHTML;
+        /*
+            document.getElementById("demo").innerHTML = ...;
+            This finds the <p id="demo"> element.
+            innerHTML is used to insert HTML/text inside that element.
+
+            "GeeksforGeeks introduction is: " + element.innerHTML;
+            This tries to take whatever content is inside the element with id "intro", and concatenate it with "GeeksforGeeks introduction is: ".
+        */
+    </script>
+
+    <p id="intro1"><b>Hello</b> <span style="display:none;">Hidden</span> World</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const element1 = document.getElementById("intro1");
+
+        // innerHTML
+        document.getElementById("intro1").innerHTML =
+            "Using innerHTML: " + element1.innerHTML;
+            console.log(element1.innerHTML);
+            /*
+            Let say we have two or more element with same id like here intro than if i do document.getElementById("intro") it will simply select first element and perform operation on that element.
+            */
+            /* In console : 
+             Returns HTML markup + text inside the element.
+             innerHTML Shows the HTML tags as well like here it will show <b> tag and <span> tag along with text of paragraph tag. */
+
+        // innerText
+        document.getElementById("demo2").innerHTML =
+            "Using innerText: " + element1.innerText;
+            console.log(demo2.innerHTML);
+            /*In console : Returns only the visible text of the element (what the user sees).
+            It ignores hidden elements (e.g., with display: none or visibility: hidden).
+            It does NOT include HTML tags.
+            */
+
+        // textContent
+        document.getElementById("demo3").innerHTML =
+            "Using textContent: " + element1.textContent;
+            console.log(demo3.innerHTML);
+            /*In console: Returns all text inside the element (including hidden text).
+            It does NOT parse HTML tags.
+            */
+    </script>
+
+</body>
+</html>

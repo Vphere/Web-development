@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color:white;
+}
+
+#navbar_header{
+    height: 100px;
+    background-color: rgba(50,50,100,0.7);
+}
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+#logo
+{
+    font-size: larger;
+    color:orange;
+    padding-left: 15px;
+}
+button{
+    background-color: orange;
+    padding: 3px;
+}
+
+#content{
+    height: 100px;
+    background-color: rgba(100,50,50,0.6);
+}
+
+#footer{
+    height: 100px;
+    background-color: rgba(50,100,50,0.5);
+}

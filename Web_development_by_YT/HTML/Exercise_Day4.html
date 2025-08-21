@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Survay form</title>
+    <style>
+        table,th,td
+        {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Feedback Survey</h1>
+    <h3>Please take a moment to complete the survey below</h3>
+
+    <form action="#" method="post">
+        <label for="name">Your Name: </label>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="age">Your Age: </label>
+        <input type="number" name="age" id="age"><br>
+
+        <label for="favColor">Favorite Color: </label>
+        <select name="color" id="color">
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="brown">Brown</option>
+        </select><br>
+
+        <label for="lblfeedback">Your Feedback: </label><br>
+        <textarea name="feedback" id="feedback" cols="30" rows="5"></textarea><br>
+
+        <input type="submit" value="submit"><br>
+
+        <h1>Instructions: </h1>
+        <ul>
+            <li>Fill in your name</li>
+            <li>Select your favourite color</li>
+            <li>Provide your feedback</li>
+            <li>Click submit button</li>
+        </ul>
+
+        <h1>Survay Responses</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Favorite Color</th>
+                <th>Feedback</th>
+            </tr>
+
+            <tr>
+                <td>Alice</td>
+                <td>30</td>
+                <td>Blue</td>
+                <td>Great Service!</td>
+            </tr>
+
+            <tr>
+                <td>Bob</td>
+                <td>25</td>
+                <td>Green</td>
+                <td>Would love to use Service in future also!</td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

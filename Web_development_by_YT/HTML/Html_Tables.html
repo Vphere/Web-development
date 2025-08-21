@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding :10px;
+        }
+        th{
+            text-align: start;
+        }
+        #d1{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <table style="width: 75%;" id="d1">
+        <caption>Details</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+
+        <tr>
+            <td>Priya</td>
+            <td>Sharma</td>
+            <td>24</td>
+        </tr>
+
+        <tr>
+            <td>Arun</td>
+            <td>Singh</td>
+            <td>32</td>
+        </tr>
+
+        <tr>
+            <td>Sam</td>
+            <td>Whatson</td>
+            <td>31</td>
+        </tr>
+    </table>
+    <br>
+
+    <hr>
+    <br>
+    <table style="width: 75%;">
+        <caption>Details1</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Priya</td>
+            <td>Sharma</td>
+            <td>24</td>
+        </tr>
+
+        <tr>
+            
+            <td>Singh</td>
+            <td>32</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">Sam</td>
+            <td>31</td>
+        </tr>
+    </table>
+    <br>
+
+    <hr>
+    <br>
+    <table>
+        <caption>Details2</caption>
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Mobile no.</th>
+        </tr>
+
+        <tr>
+            <td>Vaidik</td>
+            <td>1234567890</td>
+            <td>9876543210</td>
+        </tr>
+    </table>
+    <br>
+
+    <hr>
+    <br>
+
+    <br>
+
+    <hr>
+    <br>
+    <table>
+        <caption>Details3</caption>
+        <tr>
+            <th>Name</th>
+            <td>Vaidik</td>
+        </tr>
+
+        <tr>
+            <th rowspan="2">mobile no.</th>
+            <td>1234567890</td>
+        </tr>
+
+        <tr>
+            <td>9876543210</td>
+        </tr>
+    </table>
+    <br>
+
+    <hr>
+    <br>
+    <table>
+        <caption>Nested Table</caption>
+        <tr>
+            <td> First Column of Outer Table </td>
+            <td>
+                <table>
+                    <tr>
+                        <td> First row of Inner Table </td>
+                    </tr>
+                    <tr>
+                        <td> Second row of Inner Table </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

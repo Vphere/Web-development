@@ -1,0 +1,30 @@
+#randomdiv{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+    text-align:center;
+}
+p{
+    padding-top:40px;
+}
+
+*{
+    text-decoration: none;
+    color:white;
+}
+#navbar{
+    border: 3px solid white;
+    background-color: black;
+    height: 60px;
+}
+#amazon{
+    color: orange;
+    font-size: 25px;
+}
+#searchb{
+    background-color: orange;
+}
+a{
+    margin-right: 200px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment form</title>
+</head>
+<body>
+    <fieldset>
+    <form action=""><!--In action we are providing server loaction.-->
+    <h1>Payment Form</h1>
+    <h5><li>Required fields are followed by (*).</li></h5>
+    <h2><li>Personal Information</li></h2>
+    <p>*Name : <input type="text" name ="name" required ></p><!--name is used to store information in server on that name written in "" and it must be unique.-->
+    <fieldset><!-- It will create box around information wrapped into this tag.-->
+        <legend>Gender</legend><!--it is used to display title of fieldset-->
+    <p>
+        Male <input type="radio" name="gender" id="gender">
+        Female <input type="radio" name="gender" id="gender">
+    </p>
+    </fieldset>
+    <fieldset>
+        <legend>Hobbies</legend>
+        <p>
+            Reading<input type="checkbox" name="hobby" id="hobby">
+            Singing<input type="checkbox" name="hobby" id="hobby">
+            Dancing<input type="checkbox" name="hobby" id="hobby">
+            Swimming<input type="checkbox" name="hobby" id="hobby">
+        </p>
+    </fieldset>
+    <p>Address : <textarea name="Address" id="Address" cols="40" rows="5"></textarea> </p>
+    <p>*Email : <input type="email" name="email" id="email" required> </p>
+    <p>Pincode : <input type="number" name="pincode" id="pincode"></p>
+    
+    <h2><li>Payment Information</li></h2>
+    <p>Card type : 
+        <select name="card_type" id="card_type">
+            <option value="">--Select Card type--</option><!--Value provides a name for storing information in server.-->
+            <option value="visa">Visa</option>
+            <option value="rupay">Rupay</option>
+            <option value="mastercard">Mastercard</option>
+        </select>
+    </p>
+    <p>*Card Number : <input type="number" name="card_number" id="card_number" required></p>
+    <p>*Expiry date : <input type="date" name="exp_date" id="exp_date" required></p>
+    <p>*CVV : <input type="password" id="cvv" name="cvv" pattern="[0-9]{3,4}" maxlength="4" title="Enter a 3 or 4 digit number">
+    </p>
+    <p><input type="submit" value="Pay now">
+    <input type="reset" value="Reset"></p>
+    </form>
+    </fieldset>
+</body>
+</html>
