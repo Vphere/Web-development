@@ -1,0 +1,67 @@
+/* It will demonstrate Pseudo-classes and Pseudo-elements
+Pseudo-classes and pseudo-elements are used for styling specific states or parts of elements. Pseudo classes target's the elements based on a particular state and pseudo elements targets the elements on basis of a particular part of that element. */
+
+/* Applies when the user hovers (mouse over) on an element. */
+button:hover{
+    background-color: rgb(93, 203, 203);
+    color:white;
+}
+
+/* Applies when an element is being clicked/activated. */
+button:active{
+    background-color: brown;
+}
+
+/* Applies when an element (like input box) is focused (clicked or tabbed). */
+input:focus{
+    border: 3px solid rgb(205, 41, 41);
+}
+
+/* Styles first or last child inside a parent. */
+li:first-child {
+  color: rgb(205, 13, 13);
+}
+li:last-child {
+  color: rgb(37, 37, 235);
+}
+/* Selects an element based on its order (n = 1,2,odd,even...). */
+li:nth-child(3) {
+  color: orange;
+}
+li:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* Applies after a link has been clicked. */
+a:visited {
+  color: rgb(130, 152, 93);
+}
+
+/* Selects elements that do not match a selector. */
+p:not(.special) {
+  color: rgb(88, 166, 234);
+}
+
+/* Adds content means symbol before an element. */
+.quote::before {
+  content: "💡 ";
+  color: orange;
+}
+
+/* Adds content means symbol before an element. */
+.quote::after {
+  content: " ✅";
+  color: blue;
+}
+
+/* Styles the portion of text that a user selects. */
+p::selection {
+  background: yellow;
+  color: red;
+}
+
+/* Styles the bullet or number in lists. */
+li::marker {
+  color: red;
+  font-size: 20px;
+}

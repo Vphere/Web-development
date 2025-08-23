@@ -1,0 +1,99 @@
+<html>
+<head>
+    <style>
+        .hex-example {
+            background-color: #FF5733; /* Hexadecimal color */
+            padding: 8px;
+            font-size: 20px;
+        }
+        .rgb-example {
+            color: rgb(200,55, 0); /* RGB color */
+            margin: 8px;
+            text-align: center;
+        }
+        .rgba-example {
+            color: rgba(200,55, 0, 0.5); /* RGBA color with transparency */
+            margin: 8px;
+            text-align: center;
+        }
+        .rgba-example:hover{
+            color: rgb(200,55, 0);
+            border: 3px solid blue;
+        }
+        .hsl-example {
+            color: hsl(207, 67%, 53%); /* HSL color */
+            margin: 8px;
+            text-align: end;
+        }
+        .hsla-example {
+            color: hsla(207, 67%, 53%, 0.5); /* HSLA color with transparency */
+            margin: 8px;
+            text-align: end;
+        }
+        .hsla-example:active{
+            border: 2px solid yellowgreen;
+        }
+
+        .shadow-example {
+            text-shadow: 5px 5px 10px rgba(64, 8, 232, 0.5); 
+            /* first parameter specifies x-offset , second is y-offset,third is blur radius and last is color. 
+            x-offset -> positive value will lead text shadow to right side and negative will shadow left side
+            y-offset -> positive value will lead text to shadow below text and negative will shadow above text.*/
+            color: #FF5733;
+            font-size: 30px;
+        }
+        .box-shadow-example {
+            box-shadow: 7px 8px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            background-color: #FFF;
+        }
+
+        .gradient-example {
+            /* background: linear-gradient(red, yellow);  Top to Bottom (default) */
+            /* background: linear-gradient(to right, #e4c606, #122198);  Transition from Left to Right.*/ 
+            /* background: linear-gradient(to bottom right, blue, pink); Colors blend from top-left to bottom-right. (Diagonal)*/
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            /* Above style will Create a rainbow effect. */
+            
+            padding: 40px;
+            color: rgb(67, 9, 9);
+            text-align: center;
+        }
+        .radial-example{
+            background: radial-gradient(red, yellow, green);
+            /* Colors radiate from a center point outward in a circular or elliptical shape. */
+            color:whitesmoke;
+            margin-top: 20px;
+            padding:30px;
+        }
+        .conic-example{
+            /* background: conic-gradient(from 90deg, blue, pink, purple);  Start Angle : Gradient starts from 90° angle.*/
+            background: conic-gradient(
+            red 0deg 120deg,
+            yellow 120deg 240deg,
+            green 240deg 360deg
+            );
+            /*Pie-Chart Style : Divides circle into 3 equal sections (like pie slices).*/
+            margin-top: 20px;
+            padding: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="hex-example">This div has a Hexadecimal background color.</div>
+    <div class="rgb-example">This text is in RGB red.</div>
+    <div class="rgba-example">This text is in RGBA green with 50% transparency.</div>
+    <div class="hsl-example">This text is in HSL green.</div>
+    <div class="hsla-example">This text is in HSLA green with 50% opacity.</div>
+
+    <p class="shadow-example">This text has a shadow effect.</p>
+    <div class="box-shadow-example">This div has a box shadow.</div>
+
+    <div class="gradient-example">This div has a linear gradient background.</div>
+    <div class="radial-example">This div has a linear gradient background.</div>
+    <div class="conic-example">This div has a linear gradient background.</div>
+
+</body>
+</html>
