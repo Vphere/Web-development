@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout Example</title>
+  <style>
+   
+    .grid-container 
+    {
+      display: grid; /* enables grid layout */
+
+      grid-template-columns: repeat(3, 1fr); /* It will create 3 equal columns using fr unit */
+      /* Above line is shorthand of this line: grid-template-columns: 1fr 1fr 1fr; */
+      /* fr unit → “Fraction of available space.”
+         Example: 2fr 1fr → First column takes twice the space of the second. */
+
+      grid-template-rows: auto auto auto;
+      /* grid-template-rows: auto 200px auto; */
+      /* Above line defines the row structure of the grid:
+        auto → Row height is based on its content (shrinks or grows depending on what’s inside).
+        200px → The second row is fixed at 200px height, no matter the content.
+        auto → The third row again adapts to content height.
+        👉 So the grid will have 3 rows total:
+        Row 1 → Content-based height (auto).
+        Row 2 → Exactly 200px tall (fixed).
+        Row 3 → Content-based height (auto). */
+
+      /* 🔹 Define named grid areas */
+      grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+
+      /* 🔹 Space between grid cells */
+      gap: 15px; /* shorthand for row-gap + column-gap */
+
+      /* 🔹 Align entire grid inside container */
+      justify-content: center; /* horizontally align grid */
+      align-content: start;    /* vertically align grid */
+    }
+
+    div{
+        color: white;
+        padding: 20px;
+    }
+    /* 🔹 Assign items to grid areas */
+    .header { 
+      grid-area: header;       /* placed in header zone */
+      background: #4CAF50;
+      text-align: center;
+    }
+
+    .sidebar {
+      grid-area: sidebar;      /* placed in sidebar zone */
+      background: #2196F3;
+    }
+
+    .main {
+      grid-area: main;         /* placed in main zone */
+      background: #FF9800;
+
+      /* 🔹 Span manually across grid lines */
+      /* If we don't write below two lines than browser will automatically renders it from this line of container 
+      grid-template-areas: "header header header"
+                            "sidebar main main"
+                            "footer footer footer";*/
+      grid-column: 2 / 4;      
+      grid-row: 2 / 3;         
+      /* 🔹 With these lines
+            grid-column: 2 / 4; → The .main item starts at grid line 2 and ends at grid line 4.
+            👉 That means it spans across two columns (2nd and 3rd columns).
+            grid-row: 2 / 3; → The .main item occupies row 2 only.
+            ✅ Result: .main is wider (2 columns) than normal and sits in the middle row. */
+    }
+
+    .footer {
+      grid-area: footer;       /* placed in footer zone */
+      background: #9C27B0;
+      text-align: center;
+    }
+
+    /* 🔹 Extra items for implicit grid demo */
+    .extra {
+      background: #f44336;
+      text-align: center;
+
+      /* placed automatically (implicit grid) */
+    }
+
+    /* 🔹 Control implicit row size */
+    .grid-container {
+      grid-auto-rows: 100px; /* any extra row will be 100px tall */
+      grid-auto-flow: row;   /* fill by rows first (default) */
+    }
+
+    /* 🔹 Align items inside their cells */
+    .grid-container {
+      justify-items: stretch; /* items stretch horizontally */
+      align-items: center;    /* items center vertically */
+    }
+
+    /* 🔹 Responsive layout with auto-fit + minmax */
+    @media (max-width: 800px) {
+      .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-areas: none; /* remove named areas on small screens */
+      }
+      .header, .sidebar, .main, .footer {
+        grid-column: auto; /* reset custom spans */
+        grid-row: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <div class="header">Header (spans 3 columns)</div>
+    <div class="sidebar">Sidebar (1 column)<br>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae maiores qui nesciunt numquam praesentium laudantium impedit expedita perspiciatis, nihil porro nobis. Laudantium sunt vel assumenda nulla excepturi et modi inventore.
+        Molestias aspernatur beatae quisquam nesciunt laborum minima saepe praesentium alias, minus odit at quae laudantium excepturi ab consequatur ratione omnis nihil commodi obcaecati voluptate sunt amet aliquam blanditiis vitae! Expedita!
+        Voluptatem omnis aliquam qui aut, inventore nobis est harum voluptate itaque aliquid ratione atque rerum iusto veritatis ex neque consectetur quibusdam fugit. Aspernatur vel minus fuga, vero reiciendis non animi.
+        Velit iusto cupiditate nulla qui harum ratione, reprehenderit molestias possimus suscipit sed repellat optio porro minima, architecto maxime nostrum dolore! Mollitia magnam quod repellendus veniam aliquam officia soluta incidunt asperiores.
+    </div>
+    <div class="main">Main Content (spans 2 columns)<br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas esse est vero earum perspiciatis aliquid vel accusamus cum nemo, beatae, architecto vitae fugiat quo maxime libero consectetur natus, officiis eos?
+        Totam fugiat quasi ipsa eius exercitationem ad, enim fuga nulla sint, veritatis repudiandae optio, alias sequi voluptatem ex qui itaque ab? Molestias atque dolores sunt. Commodi excepturi quibusdam repudiandae quod.
+        Nulla adipisci sequi asperiores aperiam aliquid dolor praesentium quisquam sapiente perferendis, corporis quo officiis sed dolorem minima sit commodi eaque fugiat quos. Sapiente natus nemo nostrum non, recusandae distinctio odio.
+        Alias atque quis dicta quae, explicabo nemo eum maiores fugit iusto, suscipit dolores temporibus facilis quibusdam maxime omnis nam. At, vitae vero veritatis hic earum soluta inventore voluptatibus! Asperiores, omnis.
+        Cum amet ex aperiam velit exercitationem veniam totam nisi porro? Optio nisi consequatur cum repudiandae laudantium repellendus, temporibus est aliquid suscipit qui doloremque dolore distinctio nihil consequuntur esse. Mollitia, consequuntur.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet nulla explicabo sequi reprehenderit aliquid veniam nobis. Dolore veritatis exercitationem nisi ratione eaque facilis dolor ex repudiandae, magnam laborum velit adipisci!
+        Placeat voluptatum distinctio, eos quaerat recusandae ea ad consequatur, ab exercitationem temporibus laborum eum, non provident maiores. Pariatur, eligendi eaque? Aspernatur eius possimus aliquid vitae libero veniam velit excepturi minima.
+        Itaque, minus. Culpa eaque non deleniti voluptatibus fugiat corporis, pariatur repellendus officia suscipit beatae perspiciatis accusantium deserunt repellat voluptate esse temporibus nisi soluta. Est magnam soluta nemo dolorum vel quas.
+        Repellendus non possimus omnis laboriosam illo, id dignissimos nemo atque voluptatibus? Atque voluptas provident corporis totam ipsum? Deserunt ad enim voluptatibus veniam quasi debitis amet beatae. Incidunt ducimus modi nobis.
+        Velit excepturi repellat quaerat. Minima quod sunt sapiente, maxime, neque voluptate consectetur voluptatem voluptas saepe eum culpa quae aperiam minus magni impedit esse delectus fugit ducimus asperiores ea. Repudiandae, voluptate?
+        Nobis et quas magni dolore iusto pariatur itaque ratione blanditiis quo! Quae debitis numquam odio, molestiae at consequuntur voluptate sapiente dicta, dolor officiis eum ipsa vitae? Esse itaque rem quo?
+        Sapiente repellat cum vero et saepe earum ut eum totam assumenda. A quibusdam iure, consequatur magni recusandae porro explicabo excepturi eos placeat ut voluptatum, quos quisquam amet tenetur consequuntur neque.
+    </div>
+    <div class="footer">Footer (spans 3 columns)</div>
+
+    <!-- Extra items to show implicit grid -->
+    <div class="extra">Extra 1 (auto placed)</div>
+    <div class="extra">Extra 2 (auto placed)</div>
+  </div>
+
+</body>
+
+</html>

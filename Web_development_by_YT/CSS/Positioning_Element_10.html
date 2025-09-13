@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning elements</title>
+
+    <style>
+        *{
+            padding: 4px;
+        }
+
+        .container 
+        {
+            position: relative;
+            /* Relative positioning places an element relative to its normal position. You can move it using top, left, right, or bottom. */
+            width: 500px;
+            height: 120px;
+            top:100px;
+            left:100px;
+            border: 2px solid black;
+            margin: 20px auto;
+        }
+
+        .absolute 
+        {
+            position: absolute;
+            /* 
+            -> Absolute positioning places element relative to the nearest ancestor with a positioning context (relative, absolute, or fixed). 
+            -> The pink box (.absolute) is positioned 50px down and 50px right within the .container.*/
+            top: 50px;
+            left: 30px;
+            background-color: pink;
+            padding: 10px;
+        }
+
+        .fixed 
+        {
+            position: fixed; /* It remains in place even when the page scrolls.  */
+            width:200px;
+            top: 100px;
+            right: 10px;
+            background-color: lightgreen;
+            padding: 20px;
+            border: 2px solid black;
+        }
+        .content 
+        {
+            height: 1200px;
+            padding: 10px;
+        }
+
+        .sticky 
+        {
+            position: sticky;
+            /* Combines features of position: relative and position: fixed. The element is treated as position: relative until it reaches a specified threshold, then it becomes position: fixed. */
+            top: 0;
+            background-color: yellow;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p>Container with Relative Positioning</p>
+        <div class="absolute">Absolutely Positioned Element</div>
+    </div>
+
+    <h2>Fixed Positioning Example</h2>
+    <div class="fixed">Fixed Box</div>
+    <div class="content">
+        <p>Scroll down to see that the fixed box stays in place.</p>
+        <p>This content simulates a long page.</p>
+    </div>
+
+    <div class="sticky">I am sticky</div>
+    <p>Scroll down to see the effect.</p>
+    <div style="height: 1000px;"></div>
+
+</body>
+</html>

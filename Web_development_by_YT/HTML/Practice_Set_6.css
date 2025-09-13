@@ -1,0 +1,31 @@
+.navbar ul{
+  display: flex;              
+  justify-content: space-evenly; 
+  background-color: #bdaeae; 
+  padding: 10px;            
+}
+
+.navbar a {
+  text-decoration: none;  
+  color: black;           
+  font-weight: bold;     
+}
+
+li{
+    list-style-type: none;
+}
+
+.outer{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner{
+    height: 50px;
+    width: 50px;
+    background-color: blanchedalmond;
+}

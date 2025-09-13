@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Properties</title>
+    <!-- <style>
+        h1{
+            background-color: antiquewhite;
+        }
+        body {
+
+            /* Below method is used when we want to add image from external source which is not on our folder */
+            background-image:
+                url("https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190417124305/250.png");
+
+            
+
+            background-repeat: no-repeat;
+            
+
+            background-attachment: fixed;
+            
+
+            background-position: center;
+
+
+        }
+    </style> -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    .demo-box {
+      width: 300px;
+      height: 150px;
+      margin: 20px 0;
+      border: 2px solid #333;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      color: rgb(224, 218, 218);
+      font-weight: bold;
+    }
+
+    /* 3. Background Repeat */
+    .bg-repeat {
+      background-image: url("https://picsum.photos/80/80");
+
+      /* Below is used when we have image on our floder or on our laptop. */   
+     /* background-image: url(background_img.jpg);   */
+
+      background-repeat: repeat-x;
+      /* repeat-x means repetation of image horizontally repeat-y means repetation of image vertically
+         no-repeat means no repetation of image */
+    }
+
+    /* 4. Background Size */
+    .bg-size {
+      background-image: url("https://picsum.photos/400/200");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    /* 5. Background Position */
+    .bg-position {
+      background-image: url("https://picsum.photos/100/100");
+      background-repeat: no-repeat;
+      background-position: center;
+    /* Possible values: left top, left bottom, right top, right bottom and center */
+    }
+
+    /* 6. Background Attachment */
+    .bg-attachment {
+      background-image: url("https://picsum.photos/300/150");
+      background-attachment: fixed;
+      /*  | Value  | Behavior                                                       |
+          | scroll | Background image moves along with the page (default).          |
+          | fixed  | Background image stays fixed while content scrolls.            |
+          | local  | Background image moves when the element’s content is scrolled. |
+            */
+      background-size: cover;
+    }
+
+    /* 7. Background Clip */
+    .bg-clip {
+      border: 10px dotted black;
+      padding: 20px;
+      background: yellow;
+      background-clip: content-box;
+      color: black;
+    }
+
+    /* 8. Background Origin */
+    .bg-origin {
+      border: 10px solid black;
+      padding: 20px;
+      background: url("https://picsum.photos/100/100") no-repeat;
+      background-origin: content-box;
+    }
+
+    /* 9. Background Shorthand */
+    .bg-shorthand {
+      background: url("https://picsum.photos/200/200") no-repeat center/cover fixed lightblue;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Background Properties Demo</h1>
+  <div class="demo-box bg-repeat">background-repeat</div>
+  <div class="demo-box bg-size">background-size</div>
+  <div class="demo-box bg-position">background-position</div>
+  <div class="demo-box bg-attachment">background-attachment</div>
+  <div class="demo-box bg-clip">background-clip</div>
+  <div class="demo-box bg-origin">background-origin</div>
+  <div class="demo-box bg-shorthand">background (shorthand)</div>
+
+</body>
+</html>

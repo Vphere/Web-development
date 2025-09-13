@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Properties Full Demo (Cheat Sheet)</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Default fallback font */
+      padding: 20px;
+    }
+
+    /* 1. FONT-FAMILY: Specifies the typeface (font style)
+       Options:
+       - Generic families: serif, sans-serif, monospace, cursive, fantasy - Multiple values as fallback: "Times New Roman", Georgia, serif  */
+    .font-family {
+      font-family: "Times New Roman", serif;
+    }
+
+    /* 2. FONT-SIZE: Controls the size of text
+       Options:
+       - Absolute units: px (e.g., 16px) - Relative units: em, rem, %, larger, smaller  */
+    .font-size {
+      font-size: 24px; /* fixed size in px */
+    }
+    .font-size-relative {
+      font-size: 1.5em; /* relative to parent font size */
+    }
+
+    /* 3. FONT-STYLE: Defines the style of text
+       Options:
+       - normal (default) - italic (slanted) - oblique (less supported, also slanted) */
+    .font-style {
+      font-style: italic;
+    }
+
+    /* 4. FONT-WEIGHT: Controls the thickness of text
+       Options:
+       - normal (400), bold (700), lighter, bolder - Numeric scale: 100 to 900 (e.g., 300 = light, 900 = very bold)*/
+    .font-weight {
+      font-weight: bold;
+    }
+    .font-weight-light {
+      font-weight: 300;
+    }
+
+    /*5. FONT-VARIANT: Small-caps effect
+       Options:
+       - normal  - small-caps (converts lowercase to smaller uppercase)  */
+    .font-variant {
+      font-variant: small-caps;
+    }
+
+    /* 6. LINE-HEIGHT: Vertical spacing between lines
+       Options:
+       - normal (~1.2 by default) - number (e.g., 1.5 = 1.5 times font size) - units (px, %, em) */
+    .line-height {
+      line-height: 2; /* double spacing */
+    }
+
+    /* 7. LETTER-SPACING: Space between characters
+       Options:
+       - normal (default)  - positive values = wider spacing  - negative values = tighter spacing  */
+    .letter-spacing {
+      letter-spacing: 4px;
+    }
+
+    /* 8. WORD-SPACING: Space between words
+       Options:
+       - normal (default) - positive values = wider spacing - negative values = closer words
+    --------------------------------------------------------- */
+    .word-spacing {
+      word-spacing: 20px;
+    }
+
+    /* 9. TEXT-TRANSFORM (closely related to fonts): Controls capitalization
+       Options:
+       - none (default) - uppercase (ALL CAPS) - lowercase (all small) - capitalize (First Letter Of Each Word) */
+    .uppercase {
+      text-transform: uppercase;
+    }
+    .lowercase {
+      text-transform: lowercase;
+    }
+    .capitalize {
+      text-transform: capitalize;
+    }
+
+    /* 10. FONT (Shorthand property) : Combines multiple font-related properties into one line.
+       Order: font-style font-variant font-weight font-size/line-height font-family */
+    .shorthand {
+      font: italic small-caps bold 20px/1.5 Georgia, serif;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Font Properties Demo (with Cheat Sheet)</h1>
+
+  <p class="font-family">This text uses "Times New Roman" as font-family.</p>
+
+  <p class="font-size">This text has a fixed font-size of 24px.</p>
+  <p class="font-size-relative">This text has a relative font-size (1.5em).</p>
+
+  <p class="font-style">This text is italic using font-style.</p>
+
+  <p class="font-weight">This text is bold using font-weight.</p>
+  <p class="font-weight-light">This text is lighter (300) font-weight.</p>
+
+  <p class="font-variant">This text uses small-caps (font-variant).</p>
+
+  <p class="line-height">This text has a larger line-height. Notice the extra vertical spacing between lines. This makes text easier to read and improves readability.</p>
+
+  <p class="letter-spacing">This text has increased letter-spacing.</p>
+
+  <p class="word-spacing">This text has increased word-spacing between words.</p>
+
+  <p class="uppercase">this text is transformed to uppercase.</p>
+  <p class="lowercase">THIS TEXT IS TRANSFORMED TO LOWERCASE.</p>
+  <p class="capitalize">this text is transformed to capitalize.</p>
+
+  <p class="shorthand">This text uses the shorthand font property (italic, small-caps, bold, 20px Georgia with line height 1.5).</p>
+
+</body>
+</html>

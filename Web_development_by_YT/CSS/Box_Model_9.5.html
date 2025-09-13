@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .responsivediv {
+            max-width: 100%;
+            max-height: 100%;
+            padding: 20px;
+            border: 5px solid purple;
+            background-color: lightgreen;
+        }
+
+        div{
+            width: 300px;
+            padding: 10px;
+            box-sizing: border-box;
+            /* If i write box-sizing: border-box then width that content will take is width - padding - border and div width = 300px
+            else if i specify width = 300px it takes content width = 300px and total width of div = content width which is 300px + padding + border making total width of div more than 300px */
+            border: 3px solid lightcoral;
+            background-color: rgb(147, 211, 231);
+        }
+    </style>
+</head>
+<body>
+    <div class="normaldiv">This is not a responsive box with border-box. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sed est blanditiis quaerat sit cupiditate quod soluta adipisci tempore repellat minus, sapiente quia, consequuntur nulla illum ipsam omnis alias ea?</div>
+    
+    <div class="responsivediv">This is a responsive box with border-box. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia exercitationem minima cumque incidunt inventore quasi eum perspiciatis dolor nulla, impedit id, voluptatum minus placeat magnam magni aliquid fugit pariatur.</div>
+</body>
+</html>

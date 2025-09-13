@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width,
+                   initial-scale=1.0">
+    <title>Flexbox Fundamentals</title>
+    <style>
+        /* Flexbox Fundamentals */
+        .flex-container {
+            display: flex;
+            justify-content: space-around; /* Evenly spaces out items */
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .flex-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            flex: 1; /* Makes all items take equal space */
+            /* flex: 1 1 300px;  
+                Above line explaination:
+                flex-grow   = 1 → Can expand if there’s extra space.
+                flex-shrink = 1 → Can shrink if space is limited.
+                flex-basis = 300px → Each item wants to start at 300px width before growing/shrinking.
+                👉 So, items will try to be at least 300px wide, but will grow or shrink as needed depending on container size.
+            */
+            /* ✅ Rule of thumb:
+                Use flex: 1; when you want items to share space equally regardless of base size.
+                Use flex: 1 1 300px; when you want items to prefer a minimum size (300px) but still grow/shrink responsively. */
+            margin: 10px;
+        }
+
+        /* Responsive Navigation Bar */
+        .nav-container {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .nav-item {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            flex: 1;  /* Makes each nav item take equal space */
+        }
+
+        .nav-item:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+       
+        /* Grid Layouts with Flexbox */
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            /* 
+                flex-wrap: wrap; → By default, flexbox puts all items in one line (nowrap). With wrap, items that don’t fit move to the next flex line (so it behaves like rows of a grid). */
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 calc(33.333% - 20px);
+            /* 
+                calc(33.333% - 20px) → Flex-basis: each item wants to be about one-third of the container width, minus 20px (to account for the margin spacing). 👉 This ensures 3 items per row in a responsive way.
+            */
+            box-sizing: border-box;
+            /* 
+                box-sizing: border-box; → Tells the browser to include padding + border inside the element’s width. Without this, padding would make items wider and break the 3-column layout. */
+            text-align: center;
+        }
+
+         @media (max-width: 600px) {
+            .flex-item {
+                flex: 1 1 100%;
+                /* Stacks items on top of each other */
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Basic Flexbox Container -->
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <!-- Responsive Navigation Bar -->
+    <div class="nav-container">
+        <a href="#" class="nav-item">Home</a>
+        <a href="#" class="nav-item">About</a>
+        <a href="#" class="nav-item">Services</a>
+        <a href="#" class="nav-item">Contact</a>
+    </div>
+
+    <!-- Flexbox Grid Layout -->
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+    
+</body>
+</html>

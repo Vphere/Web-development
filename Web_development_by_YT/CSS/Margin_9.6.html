@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Demo</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 3px solid rgb(54, 54, 111)
+        }
+        .margin-demo{
+            margin: 20px 30px 40px 30px; 
+            /* 4 values are respectively top right bottom left */
+        }
+        .margin-demo1{
+            margin: 20px 30px 40px;
+            /* top=20   right&left=30   bottom=40 */
+        }
+        .margin-demo2{
+            margin: 20px 30px;
+            /* top&bottom=20   right&left=30 */
+        }
+        .margin-demo3{
+            margin: 40px;
+            /* This is shorthand for margin */
+            /* for all four sizes margin is same which is 40 */
+        }
+        .margin-demo4{
+            margin: auto;
+            width: 70%;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="margin-demo">This div is created to demonstrate how margin works.</div>
+    <div class="margin-demo1">This div1 is created to demonstrate how margin works.</div>
+    <div class="margin-demo2">This div2 is created to demonstrate how margin works.</div>
+    <div class="margin-demo3">This div3 is created to demonstrate how margin works.</div>
+    <div class="margin-demo4">This div4 has automatic margin adoption.</div>
+
+</body>
+</html>
