@@ -6,14 +6,14 @@
     <title>Take User Information</title>
     <style>
         body{
-            background-color: rgb(119, 151, 161);
+            background-color: rgb(182, 225, 237);
         }
     </style>
 </head>
 <body>
     <form method="post">
-        <fieldset>      <!-- It will create box around information wrapped into this tag.-->
-            <legend>User Information Form</legend>      <!--it is used to display title of fieldset-->
+        <fieldset>      <!-- to create box around information wrapped into this tag.-->
+            <legend>User Information Form</legend>      <!-- to display title of fieldset -->
 
             <label for="name">Name</label><br>
             <input type="text" name="name" id="name" required><br>
@@ -40,10 +40,10 @@
             <fieldset>
                 <legend>Hobbies</legend>
                 <p>
-                    Reading<input type="checkbox" name="hobby" id="hobby">
-                    Singing<input type="checkbox" name="hobby" id="hobby">
-                    Dancing<input type="checkbox" name="hobby" id="hobby">
-                    Swimming<input type="checkbox" name="hobby" id="hobby">
+                    <input type="checkbox" name="hobby" id="hobby">Reading
+                    <input type="checkbox" name="hobby" id="hobby">Singing
+                    <input type="checkbox" name="hobby" id="hobby">Dancing
+                    <input type="checkbox" name="hobby" id="hobby">Swimming
                 </p>
             </fieldset>
 
@@ -57,7 +57,7 @@
             <textarea name="address" id="address" rows="3" cols="35" required></textarea><br>
 
             <h2>Payment Information</h2>
-            <p>Card type : 
+            <p>Card type: 
                 <select name="card_type" id="card_type">
                     <option value="">--Select Card type--</option><!--Value provides a name for storing information in server.-->
                     <option value="visa">Visa</option>
@@ -66,12 +66,12 @@
                 </select>
             </p>
 
-            <p>Card Number : <input type="number" name="card_number" id="card_number" required></p>
-            <p>Expiry date : <input type="date" name="exp_date" id="exp_date" required></p>
-            <p>CVV : <input type="password" id="cvv" name="cvv" pattern="[0-9]{3,4}" maxlength="4" title="Enter a 3 or 4 digit number"></p>
+            <p>Card Number: <input type="number" name="card_number" id="card_number" required></p>
+            <p>Expiry date: <input type="date" name="exp_date" id="exp_date" required></p>
+            <p>CVV: <input type="password" id="cvv" name="cvv" pattern="[0-9]{3,4}" maxlength="4" title="Enter a 3 or 4 digit number"></p>
    
-            <input type="submit" value="submit">            
-            <input type="reset" value="reset">            
+            <input type="submit" value="Submit">            
+            <input type="reset" value="Reset">            
 
         </fieldset>
     </form>
