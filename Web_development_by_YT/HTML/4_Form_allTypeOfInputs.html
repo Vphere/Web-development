@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Take User Information</title>
+    <title>Basic Form Demo</title>
     <style>
         body{
             background-color: rgb(182, 225, 237);
@@ -15,64 +15,51 @@
         <fieldset>      <!-- to create box around information wrapped into this tag.-->
             <legend>User Information Form</legend>      <!-- to display title of fieldset -->
 
-            <label for="name">Name</label><br>
-            <input type="text" name="name" id="name" required><br>
+            <label for="name">Name</label><br> <input type="text" name="name" id="name" required><br>
             <!--name is used to store information in server on that name written in "" and it must be unique.-->
 
-            <label for="email">Email</label><br>
-            <input type="email" name="email" id="email" required><br>
+            <label for="email">Email</label><br> <input type="email" name="email" id="email" required><br>
 
-            <label for="password">Password</label><br>
-            <input type="password" name="password" id="password" required><br>
-            <label for="confirm_pwd">Confirm Password</label><br>
+            <label for="password">Password</label><br> <input type="password" name="password" id="password" required><br>
+            <label for="confirm_pwd">Confirm Password</label><br> 
             <input type="password" name="confirm_pwd" id="confirm_pwd" required><br>
 
             <fieldset>
                 <legend>Gender</legend>
-                <input type="radio" name="gender" id="male" value="male">
-                <label for="male">Male</label>
-                <input type="radio" name="gender" id="female" value="female">
-                <label for="female">Female</label>
-                <input type="radio" name="gender" id="others" value="others">
-                <label for="others">Others</label>
+                <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+                <input type="radio" id="others" name="gender" value="others"><label for="others">Others</label>
             </fieldset>
 
             <fieldset>
                 <legend>Hobbies</legend>
-                <p>
-                    <input type="checkbox" name="hobby" id="hobby">Reading
-                    <input type="checkbox" name="hobby" id="hobby">Singing
-                    <input type="checkbox" name="hobby" id="hobby">Dancing
-                    <input type="checkbox" name="hobby" id="hobby">Swimming
-                </p>
+                    <input type="checkbox" id="reading" name="hobby" value="reading">Reading
+                    <input type="checkbox" id="singing" name="hobby" value="singing">Singing
+                    <input type="checkbox" id="dancing" name="hobby" value="dancing">Dancing
+                    <input type="checkbox" id="swimming" name="hobby" value="swimming">Swimming
             </fieldset>
 
-            <label for="phoneno">Mobile number</label><br>
-            <input type="number" name="phoneno" id="phoneno" required><br>
+            <label for="phoneno">Mobile number</label><br> <input type="number" name="phoneno" id="phoneno" required><br>
 
-            <label for="dob">D.O.B</label><br>
-            <input type="date" name="dob" id="dob" required><br>
+            <label for="dob">D.O.B</label><br> <input type="date" name="dob" id="dob" required><br>
 
-            <label for="address">Address</label><br>
-            <textarea name="address" id="address" rows="3" cols="35" required></textarea><br>
+            <label for="address">Address</label><br> <textarea name="address" id="address" rows="3" cols="35" required></textarea><br>
 
             <h2>Payment Information</h2>
-            <p>Card type: 
+            Card type: 
                 <select name="card_type" id="card_type">
                     <option value="">--Select Card type--</option><!--Value provides a name for storing information in server.-->
                     <option value="visa">Visa</option>
                     <option value="rupay">Rupay</option>
                     <option value="mastercard">Mastercard</option>
                 </select>
-            </p>
 
             <p>Card Number: <input type="number" name="card_number" id="card_number" required></p>
             <p>Expiry date: <input type="date" name="exp_date" id="exp_date" required></p>
             <p>CVV: <input type="password" id="cvv" name="cvv" pattern="[0-9]{3,4}" maxlength="4" title="Enter a 3 or 4 digit number"></p>
    
             <input type="submit" value="Submit">            
-            <input type="reset" value="Reset">            
-
+            <input type="reset" value="Reset">        
         </fieldset>
     </form>
 </body>

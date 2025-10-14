@@ -1,14 +1,9 @@
 <html>
 <body>
+
     <h2>GeeksforGeeks</h2>
     <!-- Finding the HTML Elements by their Id in DOM -->
-    <p id="intro">
-        A Computer Science portal for geeks.
-    </p>
-
-    <p>
-        This example illustrates the <b>getElementById</b> method.
-    </p>
+    <p id="intro"> A Computer Science portal for geeks. </p>
 
     <p id="demo"></p>
     <script>
@@ -52,17 +47,14 @@
             console.log(demo2.innerHTML);
             /*In console : Returns only the visible text of the element (what the user sees).
             It ignores hidden elements (e.g., with display: none or visibility: hidden).
-            It does NOT include HTML tags.
-            */
+            It does NOT include HTML tags. */
 
         // textContent
         document.getElementById("demo3").innerHTML =
             "Using textContent: " + element1.textContent;
             console.log(demo3.innerHTML);
             /*In console: Returns all text inside the element (including hidden text).
-            It does NOT parse HTML tags.
-            */
+            It does NOT parse HTML tags. */
     </script>
-
 </body>
 </html>

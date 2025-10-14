@@ -2,20 +2,15 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Addition</title>
+    <title>Dynamic Addition</title>
 </head>
-
 <body>
-    <label>Enter Value 1: </label>
-    <input type="text" id="val1" />
-    <br>
-    <br>
+    <p>In below code we are fetching two values from textbox and displaying addition of it on screen.</p><br>
+    
+    <label>Enter Value 1: </label> <input type="text" id="val1" /><br><br>
+    <label>Enter Value 2: </label> <input type="text" id="val2" /><br><br>
 
-    <label>Enter Value 2: </label>
-    <input type="text" id="val2" />
-    <br>
-
-    <button onclick="getAdd()">Click To Add</button>
+    <button onclick="getAdd()">Click To Add</button><br>
     <p id="result"></p>
     <script type="text/javascript">
         function getAdd() 
@@ -32,6 +27,5 @@
             document.getElementById("result").style.color = "red";
         }
     </script>
-    
 </body>
 </html>
