@@ -5,19 +5,18 @@
     <title>Dynamic Addition</title>
 </head>
 <body>
+
     <p>In below code we are fetching two values from textbox and displaying addition of it on screen.</p><br>
-    
     <label>Enter Value 1: </label> <input type="text" id="val1" /><br><br>
     <label>Enter Value 2: </label> <input type="text" id="val2" /><br><br>
 
     <button onclick="getAdd()">Click To Add</button><br>
     <p id="result"></p>
+
     <script type="text/javascript">
         function getAdd() 
         {
-            // Fetch the value of input with id val1
             const num1 = Number(document.getElementById("val1").value);
-            // Fetch the value of input with id val2
             const num2 = Number(document.getElementById("val2").value);
             const add = num1 + num2;
             
@@ -27,5 +26,6 @@
             document.getElementById("result").style.color = "red";
         }
     </script>
+
 </body>
 </html>

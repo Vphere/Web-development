@@ -23,25 +23,21 @@
       <script>
         // 1. getElementById(id)
         const titleElement = document.getElementById("title");
-        titleElement.style.color = "blue"; // change h1 color
-        console.log("getElementById:", titleElement.innerText);
+        titleElement.style.color = "blue"; 
 
         // 2. getElementsByClassName(class)
         const highlights = document.getElementsByClassName("highlight");
         highlights[0].style.backgroundColor = "yellow"; // only first one for demo
-        console.log("getElementsByClassName:", highlights);
 
         // 3. querySelector(selector)
         const firstPara = document.querySelector("p"); // selects first <p>
         firstPara.style.border = "1px solid black";
-        console.log("querySelector:", firstPara.innerText);
 
         // 4. querySelectorAll(selector)
         const allParas = document.querySelectorAll("p"); // all <p> elements
         allParas.forEach((p, index) => {
           p.innerHTML += ` (para${index+1})`; // append numbering
         });
-        console.log("querySelectorAll:", allParas);
 
         // 5. createElement(tag)
         const newItem = document.createElement("li");
@@ -60,5 +56,6 @@
           alert("Button was clicked!");
         });
       </script>
+      
 </body>
 </html>
