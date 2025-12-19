@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter Box UI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #bccad3;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Card (box) */
+        .card {
+            width: 360px;
+            background-color: #d6e3ec;
+            margin: 80px auto;
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Number display */
+        .count {
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+
+        /* Button group */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: 2px solid #1b5769;
+            border-radius: 4px;
+            background-color: #c7dde3;
+        }
+
+        .card p {
+            font-size: 15px;
+            margin: 8px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="count">
+            <span id="counter"></span>
+        </div>
+
+        <div class="btn-group">
+            <button id="decBtn" class="btn">Decrement</button>
+            <button id="incBtn" class="btn">Increment</button>
+        </div>
+
+        <p>Clicks on Increment: <span id="inc-click"></span></p>
+        <p>Clicks on Decrement: <span id="dec-click"></span></p>
+    </div>
+
+    <script>
+        const decBtn = document.getElementById("decBtn");
+        const incBtn = document.getElementById("incBtn");
+        const counter = document.getElementById("counter");
+        const clickInc = document.getElementById("inc-click");
+        const clickDec = document.getElementById("dec-click");
+
+        let count = 0;
+        let incCount = 0;
+        let decCount = 0;
+
+        counter.textContent = 0;
+        clickInc.textContent = 0;
+        clickDec.textContent = 0;
+
+        decBtn.addEventListener("click",()=>{
+            
+            decCount>=10 ? decCount=0 : decCount++;
+            clickDec.textContent = decCount;
+
+            count>0 ? count-- : count = 0;
+            counter.textContent = count;
+        });
+
+        incBtn.addEventListener("click",()=>{
+        
+            incCount>=10 ? incCount=0 : incCount++;
+            clickInc.textContent = incCount;
+
+            count++;
+            counter.textContent = count;
+        });
+
+        decBtn
+    </script>
+
+</body>
+</html>

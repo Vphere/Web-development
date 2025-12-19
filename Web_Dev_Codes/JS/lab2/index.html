@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Subjects</title>
+    <style>
+        .highlight{
+            background: rgb(215, 156, 133);
+            padding: 2px;
+            border: 1px solid rgb(63, 51, 37);
+            color:rgb(50, 7, 152);
+        }
+    </style>
+</head>
+<body>
+    <select id="semList">
+        <option value="select">Select Semester</option>
+        <option value="2">Sem2</option>
+        <option value="4">Sem4</option>
+        <option value="6">Sem6</option>
+    </select><br><br>
+
+    <h2>List of Subjects: <span></span></h2>
+    <ul id="subjects"></ul>
+
+    <script>
+        const subject = document.getElementById("subjects");
+        const select = document.getElementById("semList"); 
+        const subList = {
+            2: ["Physics","C++","DDC","ETC"],
+            4: ["JAVA","DBMS","UHV","MPI"],
+            6: ["FSD","AOS","DAIE","DAUP"]
+        };
+
+        for(let key in subList){
+            for(let item of subList[key]){
+                const list = document.createElement("li");
+                list.textContent = item;
+                list.className = "sem" + key; 
+                subject.appendChild(list);
+            }
+        }
+
+        select.addEventListener("change", function(){
+            const sem = select.value;
+
+            const allLi = document.querySelectorAll("#subjects li");
+            allLi.forEach(li => li.classList.remove("highlight"));
+
+            const selectedLi = document.querySelectorAll(".sem"+sem);
+            selectedLi.forEach(li => li.classList.add("highlight"));
+        });
+    </script>
+</body>
+</html>

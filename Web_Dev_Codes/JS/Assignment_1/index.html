@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TechFest Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapperBox" id="wrapperBox">
+
+        <h2>TechFest Registration</h2>
+
+        <form id="techfestForm">
+
+            <div class="inputBlock">
+                <label for="userNameField">Participant Name</label>
+                <input type="text" id="userNameField" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="inputBlock">
+                <label for="emailField">Email Address</label>
+                <input type="email" id="emailField" placeholder="Enter your email">
+            </div>
+
+            <div class="inputBlock">
+                <label for="collegeField">College Name</label>
+                <input type="text" id="collegeField" placeholder="Enter your college name">
+            </div>
+
+            <div class="inputBlock">
+                <label for="eventSelectBox">Select Event</label>
+                <select id="eventSelectBox">
+                    <option value="">-- Select an Event --</option>
+                    <option value="coding">Coding Challenge</option>
+                    <option value="robotics">Robotics</option>
+                    <option value="web">Web Development</option>
+                    <option value="quiz">Tech Quiz</option>
+                </select>
+            </div>
+
+            <div class="inputBlock">
+                <label for="contactField">Contact Number</label>
+                <input type="number" id="contactField" placeholder="Enter contact number">
+            </div>
+
+            <button type="submit" id="submitBtn">
+                Register Now
+            </button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -2,10 +2,9 @@
 This loop is used for iterating over the keys (property names) of an object. */
 
 const person = { name: "Arya", age: 21 };
-
 for (let key in person) 
 {
-  console.log(key);        // name, age
+  console.log(key);         // name, age
   console.log(person[key]); // Arya, 21
 }
 

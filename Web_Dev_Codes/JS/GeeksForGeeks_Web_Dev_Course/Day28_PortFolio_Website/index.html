@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Vaidik Patel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+        }
+
+        header p a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        header p a:hover {
+            color: #2980b9;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin: 20px 0;
+            font-size: 1.8em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        table td {
+            padding: 20px;
+            vertical-align: top;
+            border: 1px solid #ddd;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '•';
+            color: #3498db;
+            position: absolute;
+            left: -20px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                display: block;
+            }
+            
+            table tr {
+                display: block;
+                margin-bottom: 20px;
+            }
+            
+            table td {
+                display: block;
+                border: none;
+                border-bottom: 1px solid #ddd;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align:center;">Vaidik Patel</h1>
+        <p style="text-align:center;">Home | Projects | Blogs | Contact</p>
+    </header>
+    <h2 style="text-align:center;">Web Developer and Designer</h2>
+    <table border="1" width="100%">
+        <tr>
+            <td>
+                <h3>Portfolio Highlights</h3>
+                <ul>
+                    <li>Responsive HTML Layout</li>
+                    <li>E-commerce Storefront</li>
+                    <li>Interactive Form Design</li>
+                    <li>Event Countdown Widget</li>
+                    <li>Prototype Landing Pages</li>
+                </ul>
+            </td>
+            <td>
+                <h3>Career Achievements</h3>
+                <p>Frontend Developer [Intern] at Google<br>Headed major product redesigns resulting in a 40% increase in user engagement.<br><a href="#">View My LinkedIn Profile</a></p>
+                <h3>Community Involvement</h3>
+                <p>Active participant in local and online developer forums. Regularly contribute to web development blogs and GitHub projects.<br><a href="#">Visit My GitHub</a></p>
+            </td>
+            <td>
+                <h3>Academic Qualifications</h3>
+                <p>B.Tech (Information Technology) from DDU</p>
+                <p>Specializations:</p>
+                <ul>
+                    <li>Systems Analysis</li>
+                    <li>Advanced JavaScript Techniques</li>
+                    <li>Web Accessibility Standards</li>
+                    <li>Performance Optimization in Web Applications</li>
+                    <li>Cloud Computing Infrastructure</li>
+                    <li>Security in Web Applications</li>
+                    <li>Advanced Algorithms</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <h3>Peer Reviews</h3>
+    <table border="1" width="100%">
+        <tr>
+            <td>Vaidik consistently delivers high-quality, innovative solutions that exceed project expectations. - Steven, Project Lead</td>
+            <td>Vaidik is known for his precise attention to detail and his ability to mentor younger developers. - David, UI Designer</td>
+            <td>Vaidik's approach to problem-solving has been instrumental in our success. - Sarah, Frontend Developer</td>
+        </tr>
+    </table>
+    <footer style="text-align:center;">
+        © [2025] All rights reserved by Vaidik Patel
+    </footer>
+
+    <script>// Dark Mode Toggle
+        const toggleDarkMode = () => {
+            document.body.classList.toggle('dark-mode');
+        };
+
+        // Add dark mode button
+        const darkModeBtn = document.createElement('button');
+        darkModeBtn.innerText = 'Toggle Dark Mode';
+        darkModeBtn.style.position = 'fixed';
+        darkModeBtn.style.top = '20px';
+        darkModeBtn.style.right = '20px';
+        darkModeBtn.style.padding = '10px';
+        darkModeBtn.style.backgroundColor = '#3498db';
+        darkModeBtn.style.color = '#fff';
+        darkModeBtn.style.border = 'none';
+        darkModeBtn.style.borderRadius = '5px';
+        darkModeBtn.style.cursor = 'pointer';  
+        darkModeBtn.onclick = toggleDarkMode;
+        document.body.appendChild(darkModeBtn);
+
+        // Dark mode styles
+        const darkStyle = document.createElement('style');
+        darkStyle.innerHTML = `
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+        }
+        .dark-mode table {
+            background-color: #2c2c2c;
+        }
+        .dark-mode header, .dark-mode footer {
+            background-color: #111;
+        }
+        .dark-mode a {
+            color: #1abc9c;
+        }
+        `;
+        document.head.appendChild(darkStyle);
+
+        // Typing Animation for Title
+        const title = document.querySelector('h2');
+        const text = "Web Developer and Designer";
+        let index = 0;
+
+        const typeEffect = () => {
+            if (index < text.length) {
+                title.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100);
+            }
+        };
+
+        title.innerHTML = "";
+        typeEffect();
+
+        // Smooth Scroll Navigation (for demonstration)
+        const navLinks = document.querySelectorAll('header p');
+        navLinks.forEach(link => {
+            link.style.cursor = 'pointer';
+            link.onclick = () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        });
+
+        // Popup Modal for Peer Reviews
+        const peerReviewTable = document.querySelectorAll('table')[1];
+        peerReviewTable.querySelectorAll('td').forEach((td, i) => {
+            td.style.cursor = 'pointer';
+            td.onclick = () => showModal(td.innerText);
+        });
+
+        const showModal = (text) => {
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+            modal.style.zIndex = '1000';
+
+            const modalContent = document.createElement('div');
+            modalContent.style.background = '#fff';
+            modalContent.style.padding = '20px';
+            modalContent.style.borderRadius = '10px';
+            modalContent.style.maxWidth = '600px';
+            modalContent.innerHTML = `<p>\${text}</p><button style="margin-top:10px;">Close</button>`;
+
+            modalContent.querySelector('button').onclick = () => document.body.removeChild(modal);
+
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+        };
+
+        // Scroll to Top Button
+        const scrollBtn = document.createElement('button');
+        scrollBtn.innerText = '↑ Top';
+        scrollBtn.style.position = 'fixed';
+        scrollBtn.style.bottom = '60px';
+        scrollBtn.style.right = '20px';
+        scrollBtn.style.padding = '10px';
+        scrollBtn.style.backgroundColor = '#2c3e50';
+        scrollBtn.style.color = '#fff';
+        scrollBtn.style.border = 'none';
+        scrollBtn.style.borderRadius = '5px';
+        scrollBtn.style.cursor = 'pointer';
+        scrollBtn.style.display = 'none';
+
+        scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.body.appendChild(scrollBtn);
+
+        // Show button when scrolling down
+        window.onscroll = () => {
+            scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+        };
+
+    </script>
+</body>
+</html>

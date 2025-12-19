@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+    <script>
+        function submitDetails(){
+            const name = document.getElementById("name");
+            console.log(name.value);
+
+            const email = document.getElementById("email");
+            console.log(email.value);
+
+            const phone = document.getElementById("phone");
+            console.log(phone.value);
+        }
+    </script>
+</head>
+<body>
+    Enter your name: <input type="text" name="name" id="name"><br>
+    Enter your email: <input type="email" name="email" id="email"><br>
+    Enter your phone.no: <input type="number" name="phone" id="phone">
+    <input type="button" onClick="submitDetails()" value="Click to submit details">
+</body>
+</html>

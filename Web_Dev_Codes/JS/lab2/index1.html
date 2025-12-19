@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <style>
+        label {
+            display: inline-block;
+            width: 250px;
+        }
+
+        label input[type="checkbox"]:checked + span {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .taskRow {
+            margin: 5px 0;
+        }
+
+        .removeBtn {
+            margin-left: 10px;
+            color: white;
+            background: red;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        #add{
+            background-color: green;
+            color:white;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-radius: 4px;
+        }
+
+        #task{
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="task" placeholder="Enter task to add in list">
+    <input type="button" value="Add" id="add"><br><br>
+
+    <h2>List of Tasks to Do/Done:</h2>
+
+    <div id="list"></div>
+
+    <script>
+        const btn = document.getElementById("add");
+        const listDiv = document.getElementById("list");
+
+        const tasks = [
+            "Revise AJT Concepts",
+            "Learn new thing in FSD",
+            "Wake up at 5am",
+            "Do daily workout"
+        ];
+
+        function addTask(text) {
+            const row = document.createElement("div");
+            row.className = "taskRow";
+
+            const label = document.createElement("label");
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+
+            const span = document.createElement("span");
+            span.textContent = text;
+
+            label.appendChild(checkbox);
+            label.appendChild(span);
+
+            const removeBtn = document.createElement("button");
+            removeBtn.textContent = "Remove";
+            removeBtn.className = "removeBtn";
+
+            removeBtn.addEventListener("click", function () {
+                row.remove();
+            });
+
+            row.appendChild(label);
+            row.appendChild(removeBtn);
+
+            listDiv.appendChild(row);
+        }
+
+        tasks.forEach(task => addTask(task));
+
+        btn.addEventListener("click", function () {
+            const text = document.getElementById("task").value.trim();
+
+            if (text === "") 
+                return; 
+
+            addTask(text);
+
+            document.getElementById("task").value = ""; // clear input
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <input type="text" id="task" placeholder="Enter task to add in list">
+    <input type="button" value="Add" id="add"><br><br>
+    <h2>List of Tasks to Do/Done: </h2>
+
+    <script>
+        const btn = document.getElementById("add");
+        const tasks = ["Revise AJT Concepts","Learn new thing in FSD","Wake up at 5am","Do daily workout"];
+
+        for (let item of tasks) {
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.value = item;
+
+            const label = document.createElement("label");
+            label.textContent = item;
+            label.prepend(checkbox);
+            document.body.appendChild(label);
+
+            document.body.appendChild(document.createElement("br"));
+        }
+
+
+        btn.addEventListener("click", function(){
+            const text = document.getElementById("task").value;
+
+            const checkbox = document.createElement("input");
+            checkbox.value = text;
+            checkbox.type = "checkbox";
+
+            const label = document.createElement("label");
+            label.textContent = text;
+            label.prepend(checkbox);
+            document.body.appendChild(label);
+
+            document.body.appendChild(document.createElement("br"));
+        });
+
+
+    </script>
+</body>
+</html> -->
