@@ -1,0 +1,14 @@
+li {
+    padding: 3px;
+    border-radius: 6px;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.completed {
+    text-decoration: line-through;
+    background-color: rgb(110, 216, 110);
+    color: gray;
+}

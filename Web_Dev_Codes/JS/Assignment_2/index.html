@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel World | Smart Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <h1>Travel World</h1>
+        <p class="subtitle">Smart Travel Dashboard</p>
+
+        <div class="card">
+            <h3>Temperature Preference</h3>
+            <label for="tempUnit">Select Unit</label>
+            <select id="tempUnit">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+            </select>
+        </div>
+
+        <div class="card">
+            <h3>Quick Trip Notes</h3>
+            <textarea id="tripNotes" placeholder="Write your travel notes here..."></textarea>
+        </div>
+
+        <div class="card">
+            <h3>Current Weather</h3>
+            <p id="weatherInfo">
+                Loading weather data...
+            </p>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

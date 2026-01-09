@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Event Attributes Demo</title>
+  <style>
+    #colorBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightgray;
+      border: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Event Handling with HTML Attributes</h2>
+
+  <div id="colorBox" 
+       onmouseover="highlightBox()" 
+       onmouseout="resetBox()">
+    Hover or Click Me
+  </div>
+  <br />
+  <button id="changeBtn" onclick="changeBackground()">Change Background</button>
+  <input id="nameInput" type="text" 
+         placeholder="Type your name" 
+         onkeyup="showName()" />
+  <p id="output"></p>
+
+  <script>
+    // Event handler functions (same logic as before)
+    function changeBackground() {
+      document.body.style.backgroundColor = "lightgreen";
+    }
+
+    function highlightBox() {
+      document.getElementById("colorBox").style.backgroundColor = "yellow";
+    }
+
+    function resetBox() {
+      document.getElementById("colorBox").style.backgroundColor = "lightgray";
+    }
+
+    function showName() {
+      document.getElementById("output").textContent = "Hello, " + 
+        document.getElementById("nameInput").value + "!";
+    }
+  </script>
+</body>
+</html>

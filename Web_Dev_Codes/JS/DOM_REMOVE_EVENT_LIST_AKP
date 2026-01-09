@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM Events with removeEventListener</title>
+  <style>
+    #colorBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightgray;
+      border: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+    button { margin: 5px; }
+  </style>
+</head>
+<body>
+  <h2>DOM Events + removeEventListener Demo</h2>
+
+  <div id="colorBox">Click 3 times to disable</div>
+  <br />
+  <button id="addEvents">Add Event Listeners</button>
+  <button id="removeEvents">Remove All Listeners</button>
+  <p id="clickCount">Clicks: 0</p>
+  <p id="status"></p>
+
+  <script>
+    const colorBox = document.getElementById("colorBox");
+    const addBtn = document.getElementById("addEvents");
+    const removeBtn = document.getElementById("removeEvents");
+    const clickCountEl = document.getElementById("clickCount");
+    const statusEl = document.getElementById("status");
+    
+    let clickCount = 0;
+    let clickHandler, mouseoverHandler, mouseoutHandler;
+
+    // Event handler functions (named functions for removeEventListener)
+    clickHandler = function() {
+      clickCount++;
+      clickCountEl.textContent = `Clicks: ${clickCount}`;
+      
+      if (clickCount >= 3) {
+        statusEl.textContent = "Task complete! Events removed automatically.";
+        // Remove specific listener after work completes [file:1]
+        colorBox.removeEventListener("click", clickHandler);
+        colorBox.removeEventListener("mouseover", mouseoverHandler);
+        colorBox.removeEventListener("mouseout", mouseoutHandler);
+      }
+    };
+
+    mouseoverHandler = function() {
+      colorBox.style.backgroundColor = "yellow";
+    };
+
+    mouseoutHandler = function() {
+      if (clickCount < 3) colorBox.style.backgroundColor = "lightgray";
+    };
+
+    function addAllListeners() {
+      colorBox.addEventListener("click", clickHandler);           
+      colorBox.addEventListener("mouseover", mouseoverHandler);  
+      colorBox.addEventListener("mouseout", mouseoutHandler);     
+      statusEl.textContent = "Events added - try clicking!";
+    }
+
+    function removeAllListeners() {
+      colorBox.removeEventListener("click", clickHandler);        
+      colorBox.removeEventListener("mouseover", mouseoverHandler); 
+      colorBox.removeEventListener("mouseout", mouseoutHandler);  
+      statusEl.textContent = "All events removed manually.";
+      clickCount = 0;
+      clickCountEl.textContent = "Clicks: 0";
+      colorBox.style.backgroundColor = "lightgray";
+    }
+
+    addBtn.addEventListener("click", addAllListeners);
+    removeBtn.addEventListener("click", removeAllListeners);
+  </script>
+</body>
+</html>

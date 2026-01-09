@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM & Events Demo</title>
+  <style>
+    #colorBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightgray;
+      border: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h2>DOM and Event Handling Example</h2>
+
+  <div id="colorBox">Hover or Click Me</div>
+  <br />
+  <button id="changeBtn">Change Background</button>
+  <input id="nameInput" type="text" placeholder="Type your name" />
+  <p id="output"></p>
+
+  <script>
+    // Get DOM elements (event sources)
+    const colorBox = document.getElementById("colorBox");
+    const changeBtn = document.getElementById("changeBtn");
+    const nameInput = document.getElementById("nameInput");
+    const output = document.getElementById("output");
+
+    // Event handler functions
+    function changeBackground() {
+      document.body.style.backgroundColor = "lightblue";
+    }
+
+    function highlightBox() {
+      colorBox.style.backgroundColor = "yellow";
+    }
+
+    function resetBox() {
+      colorBox.style.backgroundColor = "lightgray";
+    }
+
+    function showName() {
+      output.textContent = "Hello, " + nameInput.value + "!";
+    }
+
+    // Register event handlers using DOM API
+    changeBtn.addEventListener("click", changeBackground);      // mouse click 
+    colorBox.addEventListener("mouseover", highlightBox);       // mouseover
+    colorBox.addEventListener("mouseout", resetBox);            // mouseout 
+    nameInput.addEventListener("keyup", showName);              // keyboard event 
+  </script>
+</body>
+</html>

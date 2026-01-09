@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Guide</title>
+ <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+        header { background: #f4f4f4; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        nav ul { list-style: none; padding: 0; display: flex; gap: 15px; }
+        nav a { text-decoration: none; color: #007bff; }
+        main { margin-bottom: 20px;}
+        section { margin-bottom: 30px; padding: 20px; border-left: 4px solid #007bff; background: #fafafa; }
+        article { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        aside { float: right;  width: 250px; background: #e9ecef; padding: 15px; border-radius: 8px; margin: 20px 0; }
+        footer { background: #333; color: white; text-align: center; padding: 15px; border-radius: 8px; margin-top: 25px; clear: both;}
+        h1, h2 { color: #333; }
+        figure { text-align: center; margin: 20px 0; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Semantic HTML</h1>
+        <p>Dr. Harshad Prajapati | 7 Nov 2023</p>
+        <nav>
+            <ul>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#elements">Elements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>What is Semantic HTML?</h2>
+            <p>Semantics in HTML focuses on the role and purpose of elements rather than their appearance. Semantic elements like &lt;h1&gt; provide meaning to content, helping browsers, screen readers, and search engines understand structure.</p>
+        </section>
+
+        <section id="benefits">
+            <h2>Benefits of Semantic Markup</h2>
+            <ul>
+                <li>Improves SEO by helping search engines index content effectively.</li>
+                <li>Enhances accessibility for screen readers and visually impaired users.</li>
+                <li>Makes code more maintainable by clearly defining content types.</li>
+            </ul>
+        </section>
+
+        <article id="elements">
+            <header>
+                <h2>Key Semantic Elements</h2>
+                <time datetime="2023-11-07">Updated Nov 2023</time>
+            </header>
+            
+            <section>
+                <h3>&lt;section&gt; Element</h3>
+                <p>Groups thematically related content, like chapters or news items.</p>
+            </section>
+            
+            <section>
+                <h3>&lt;article&gt; Element</h3>
+                <p>Represents self-contained content such as blog posts or comments that can stand alone.</p>
+            </section>
+            
+            <figure>
+                <img src="D:\0000 FSD\SEMANTIC DIAGRAM.png" alt="Diagram of semantic webpage structure">
+                <figcaption>Example webpage using semantic elements.</figcaption>
+            </figure>
+        </article>
+
+        <aside>
+            <section>
+                <h3>Related Topics</h3>
+                <ul>
+                    <li>SEO Best Practices</li>
+                    <li>Accessibility Guidelines</li>
+                    <li>HTML5 Standards</li>
+                </ul>
+            </section>
+
+        </aside>
+        <aside style="float: left;">
+            <section>
+                <h3>Related Topics</h3>
+                <ul>
+                    <li>SEO Best Practices</li>
+                    <li>Accessibility Guidelines</li>
+                    <li>HTML5 Standards</li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Semantic HTML Guide. References: MDN Web Docs, W3Schools.</p>
+    </footer>
+</body>
+</html>
