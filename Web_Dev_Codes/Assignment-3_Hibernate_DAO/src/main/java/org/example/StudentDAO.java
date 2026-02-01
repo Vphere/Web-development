@@ -1,0 +1,14 @@
+package org.example;
+
+import org.example.entities.Student;
+
+public interface StudentDAO
+{
+    void saveStudent(Student student);
+
+    void updateStudent(Student student);
+
+    void deleteStudent(Student student);
+
+    Student getStudentById(int id);
+}
