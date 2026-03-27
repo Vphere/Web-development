@@ -1,0 +1,6 @@
+.album-container {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  overflow-x: auto; /* horizontal scroll */
+}
